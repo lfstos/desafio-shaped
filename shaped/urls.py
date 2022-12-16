@@ -19,9 +19,11 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from paciente.views import PacienteViewSet
+from exame.views import ExameViewSet
 
 router = routers.DefaultRouter()
-router.register(r'paciente', PacienteViewSet)
+router.register('paciente', PacienteViewSet)
+router.register('exame', ExameViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
